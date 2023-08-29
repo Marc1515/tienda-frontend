@@ -14,14 +14,14 @@ export class AppComponent {
   private authService = inject(AuthService);
   private router = inject(Router);
 
-  public finishedAuthCheck = computed<boolean>(() => {
+  /*   public finishedAuthCheck = computed<boolean>(() => {
     if (this.authService.authStatus() === AuthStatus.checking) {
       console.log(this.authService.authStatus());
       return false;
     }
 
     return true;
-  });
+  }); */
 
   public authStatusChangedEffect = effect(() => {
     /* console.log('authStatus:', this.authService.authStatus()); */
